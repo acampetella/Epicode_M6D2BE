@@ -1,0 +1,42 @@
+GET http://localhost:5050/blogPosts
+
+
+#######
+
+
+POST http://localhost:5050/blogPosts HTTP/1.1
+content-type: application/json
+
+{
+  "category": "General",
+  "title": "Titolo5",
+  "author": {
+    "name": "Diletta",
+    "avatar": "https://picsum.photos/200/200"
+  },
+  "cover": "https://picsum.photos/1920/1080",
+  "content": "Eu incididunt pariatur incididunt enim mollit sit quis culpa do amet ad reprehenderit mollit proident. Lorem sunt elit deserunt exercitation anim laborum. In reprehenderit consequat officia ipsum ullamco sunt cillum id. Enim excepteur qui ut adipisicing."
+}
+
+
+#######
+
+GET http://localhost:5050/blogPosts/646e5b0eda8a852bac56d8ea
+
+
+#######
+
+
+PATCH http://localhost:5050/blogPosts/646e5b0eda8a852bac56d8ea HTTP/1.1
+content-type: application/json
+
+{
+  "author": {
+    "name": "Marco"
+  }
+}
+
+#######
+
+
+DELETE  http://localhost:5050/blogPosts/646f151990407d619b645a2e

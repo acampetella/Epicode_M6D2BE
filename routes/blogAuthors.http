@@ -1,0 +1,46 @@
+
+GET http://localhost:5050/authors
+
+
+#######
+
+
+POST http://localhost:5050/authors HTTP/1.1
+content-type: application/json
+
+{
+  "firstName": "Lorenzo",
+  "lastName": "Verdi",
+  "email": "test3@hotmail.com",
+  "birthDate" : "25/11/1980"
+}
+
+
+#######
+
+GET http://localhost:5050/authors/646e301f893355d99cb09f01
+
+
+#######
+
+
+GET http://localhost:5050/authors/646e301f893355d99cb09f01/blogPosts
+
+
+
+#######
+
+
+
+PATCH http://localhost:5050/authors/646e301f893355d99cb09f01 HTTP/1.1
+content-type: application/json
+
+{
+  "birthDate" : "25/10/1978"
+}
+
+#######
+
+
+
+DELETE  http://localhost:5050/authors/646e301f893355d99cb09f02
